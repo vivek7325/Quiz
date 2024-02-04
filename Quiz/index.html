@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <title>Quiz</title>
+</head>
+
+<body>
+    <main>
+        <section>
+            <form id="quiz-form" class="quiz-form">
+                <h2><span>Quiz</span></h2>
+                <!-- amount -->
+                <div class="form-control">
+                    <label for="amount">Number of Questions</label>
+                    <input type="number" name="amount" id="amount" class="form-input" min="1" max="15" />
+                </div>
+                <!-- difficulty -->
+                <div class="form-control">
+                    <label for="difficulty">Select Difficulty</label>
+                    <select name="difficulty" id="difficulty" class="form-input">
+                        <option value="easy">Easy</option>
+                        <option value="medium">Medium</option>
+                        <option value="hard">Hard</option>
+                    </select>
+                </div>
+                <p id="error-message" class="error"></p>
+                <button type="button" class="submit-btn">
+                    Start
+                </button>
+            </form>
+
+            <div id="Quiz-Ques" class="Quiz-Ques">
+                <div class="timer">
+                    <div class="time_left_txt">Time Left</div>
+                    <div class="timer_sec">15</div>
+                </div>
+                <div class="score_text">
+                    Your Score: <span id="Score">0</span>
+                </div>
+                <div id="question-container" class="question-container"></div>
+                <div id="options-container" class="options-container"></div>
+                <button id="next-btn" class="next-btn">Next</button>
+            </div>
+
+
+
+        </section>
+
+
+    </main>
+    <div class="result_container">
+        <div class="result_box">
+            <div class="complete_text"></div>
+            <div class="score_text"></div>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+    <script src="quizData.js"></script>
+</body>
+
+</html>
